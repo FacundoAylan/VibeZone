@@ -53,14 +53,14 @@ export async function POST(req) {
     const { id, first_name, last_name, image_url, email_addresses, username } = evt?.data;
 
     try {
-      // await CreateUser({
-      //   id,
-      //   first_name,
-      //   last_name,
-      //   image_url,
-      //   email_addresses,
-      //   username
-      // });
+      CreateUser({
+        id,
+        first_name,
+        last_name,
+        image_url,
+        email_addresses,
+        username
+      });
 
       return new Response(evt.data, {
         status: 200,

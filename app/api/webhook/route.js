@@ -54,14 +54,14 @@ export async function POST(req) {
       evt?.data;
 
     try {
-      await CreateUser(
+      await CreateUser({
         id,
         first_name,
         last_name,
         image_url,
         email_addresses,
         username
-      );
+      });
 
       return new Response("User is created or updated", {
         status: 200,
